@@ -29,6 +29,6 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        source: "_site/"
-        target: "~/html/witteker.de/"
+        source: "_site"
+        target: "~/html/witteker.de"
         rm: true
