@@ -1,0 +1,27 @@
+article.hero {
+  padding-bottom: 0;
+  box-shadow: none;
+  align-items: center;
+}
+
+figure.profile {
+  max-width: 75%;
+  margin: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-box-shadow);
+}
+
+ul.social-links {
+  padding-left: 0;
+}
+
+ul.social-links > span.list-header {
+  display: list-item;
+  font-weight: bold;
+  margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
+}
+
+ul.social-links > li,
+ul.social-links > span.list-header {
+  list-style: none;
+}

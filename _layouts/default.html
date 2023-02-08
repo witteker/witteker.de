@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Cormorant:wght@700&family=Heebo:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    {{ content }}
+
+    <footer class="container">
+        <hr>
+        <div class="grid">
+            <p>
+                {{ site.author }} <br>
+                <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
