@@ -6,21 +6,15 @@ layout: default
     <article class="hero grid">
         <section>
             <figure class="profile">
-                <img src="assets/images/profile.webp" width="100%" height="100%" alt="Portrait picture of Erik Wittek">
+                <img
+                    src="assets/images/profile.webp"
+                    width="100%"
+                    height="100%"
+                    alt="Portrait picture of Erik Wittek"
+                />
             </figure>
         </section>
 
-        <section>
-            <hgroup>
-                <h1>Hi, I'm {{ site.author }}!</h1>
-                <p>{{ site.description }}</p>
-            </hgroup>
-
-            <ul class="social-links">
-                <span class="list-header">You can find me on:</span>
-                <li><a href="https://twitter.com/wittek_er">Twitter</a></li>
-                <li><a href="https://github.com/erikwittek">GitHub</a></li>
-            </ul>
-        </section>
+        <section>{{ content }}</section>
     </article>
 </main>
