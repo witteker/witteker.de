@@ -27,6 +27,8 @@ url: "https://witteker.de" # the base hostname & protocol for your site, e.g. ht
 twitter_username: wittek_er
 github_username: erikwittek
 
+language: en
+
 collections:
   - photo_collections
 
