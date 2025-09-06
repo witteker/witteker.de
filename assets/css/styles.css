@@ -1,27 +1,99 @@
 article.hero {
-  padding-bottom: 0;
-  box-shadow: none;
-  align-items: center;
+    padding-bottom: 0;
+    box-shadow: none;
+    align-items: center;
+    background-color: var(--background-color);
 }
 
 figure.profile {
-  max-width: 75%;
-  margin: auto;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-box-shadow);
+    max-width: 75%;
+    margin: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-box-shadow);
 }
 
 ul.social-links {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 ul.social-links > span.list-header {
-  display: list-item;
-  font-weight: bold;
-  margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
+    display: list-item;
+    font-weight: bold;
+    margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
 }
 
 ul.social-links > li,
 ul.social-links > span.list-header {
-  list-style: none;
+    list-style: none;
+}
+
+.image-container {
+    position: relative;
+    padding-bottom: 100%;
+    background-color: var(--card-background-color);
+    box-shadow: var(--card-box-shadow);
+    padding-bottom: 100%;
+    margin: auto;
+}
+
+.go-big:target .image-container {
+    padding-bottom: calc(100vh - 2 * var(--spacing));
+}
+
+@media (min-width: 576px) {
+    .go-big:target .image-container {
+        max-width: 510px;
+    }
+}
+@media (min-width: 768px) {
+    .go-big:target .image-container {
+        max-width: 700px;
+    }
+}
+@media (min-width: 992px) {
+    .go-big:target .image-container {
+        max-width: 920px;
+    }
+}
+@media (min-width: 1200px) {
+    .go-big:target .image-container {
+        max-width: 1130px;
+    }
+}
+
+a.go-home {
+    display: none;
+}
+
+.go-big:target a.go-home {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: var(--spacing);
+    z-index: 101;
+}
+
+/*.go-big:target .image-container {
+    margin: auto;
+}*/
+
+.go-big:target {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    padding: var(--spacing);
+}
+
+.image-container img {
+    position: absolute;
+    max-height: calc(100% - 2 * var(--spacing));
+    max-width: calc(100% - 2 * var(--spacing));
+    margin: var(--spacing);
+    top: calc(50% - var(--spacing));
+    left: calc(50% - var(--spacing));
+    transform: translate(-50%, -50%);
 }
