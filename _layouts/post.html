@@ -11,13 +11,15 @@ layout: default
 
         <section>
             {% for photos in page.photos %}
-            <div class="grid" style="padding-bottom: var(--spacing)">
+            <div class="grid">
                 {% for photo in photos %}
                 <div class="go-big" id="{{photo}}">
                     <a href="{{url}}" class="go-home">&times;</a>
                     <a href="#{{photo}}">
                         <div class="image-container">
-                            <img src="/assets/images/{{page.slug}}/{{photo}}" />
+                            <img
+                                src="/assets/images/{{page.slug}}/{{photo}}.jpg"
+                            />
                         </div>
                     </a>
                 </div>

@@ -32,12 +32,12 @@ ul.social-links > span.list-header {
     padding-bottom: 100%;
     background-color: var(--card-background-color);
     box-shadow: var(--card-box-shadow);
-    padding-bottom: 100%;
-    margin: auto;
+    margin-top: var(--spacing);
 }
 
 .go-big:target .image-container {
     padding-bottom: calc(100vh - 2 * var(--spacing));
+    margin: auto;
 }
 
 @media (min-width: 576px) {
@@ -51,6 +51,16 @@ ul.social-links > span.list-header {
     }
 }
 @media (min-width: 992px) {
+    .go-big:only-child {
+        max-width: 60%;
+        margin-left: 20%;
+    }
+
+    .go-big:target:only-child {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
     .go-big:target .image-container {
         max-width: 920px;
     }
@@ -68,9 +78,10 @@ a.go-home {
 .go-big:target a.go-home {
     display: inline-block;
     position: fixed;
-    top: 0;
-    right: 0;
-    padding: var(--spacing);
+    top: var(--spacing);
+    right: var(--spacing);
+    width: 24px;
+    text-align: center;
     z-index: 101;
 }
 
