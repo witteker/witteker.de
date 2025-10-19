@@ -35,9 +35,17 @@ language: de
 
     {% for post in site.posts %}
     <article>
-        <hgroup>
-            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            {{ post.excerpt }}
+        <hgroup class="grid">
+            <div>
+                <img
+                    src="/assets/images/{{post.slug}}/{{post.title_image}}.jpg"
+                    style="display: block; margin: auto; max-width: 50%"
+                />
+            </div>
+            <div style="margin: auto 0">
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                {{ post.excerpt }}
+            </div>
         </hgroup>
     </article>
     {% endfor %}
