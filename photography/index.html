@@ -1,0 +1,44 @@
+---
+layout: default
+language: de
+---
+
+<main class="container">
+    <article class="hero">
+        <hgroup>
+            <h1>Erik Wittek</h1>
+            <p>Analoge Fotografie — urban und unterwegs</p>
+        </hgroup>
+
+        <ul class="social-links">
+            <li>
+                <a
+                    href="https://www.instagram.com/witteker.photography/"
+                    target="blank"
+                >
+                    Instagram
+                </a>
+            </li>
+        </ul>
+
+        <p>
+            In regelmäßigen Abständen schaue ich auf meine fotografischen
+            Arbeiten zurück. Oft fällt mir dabei sofort ein Thema oder eine
+            Stimmung auf, die sich wie ein roter Faden durch bestimmte Aufnahmen
+            zieht. Diese Idee greife ich auf, ergänze sie mit weiteren Bildern
+            aus meinem Archiv – und lasse daraus eine neue Bilderserie
+            entstehen. So entstehen kleine Fotohefte, sogenannte Zines, deren
+            digitale Fassungen ich hier veröffentliche. Jede Kollektion ist ein
+            visueller Gedanke, der zum Entdecken einlädt.
+        </p>
+    </article>
+
+    {% for post in site.posts %}
+    <article>
+        <hgroup>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            {{ post.excerpt }}
+        </hgroup>
+    </article>
+    {% endfor %}
+</main>
