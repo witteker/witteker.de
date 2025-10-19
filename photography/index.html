@@ -38,7 +38,14 @@ language: de
         <hgroup class="grid">
             <div>
                 <img
-                    src="/assets/images/{{post.slug}}/{{post.title_image}}.jpg"
+                    loading="lazy"
+                    srcset="
+                        /assets/images/{{post.slug}}/mobile/{{post.title_image}}.webp   320w,
+                        /assets/images/{{post.slug}}/tablet/{{post.title_image}}.webp   768w,
+                        /assets/images/{{post.slug}}/desktop/{{post.title_image}}.webp  960w,
+                        /assets/images/{{post.slug}}/monitor/{{post.title_image}}.webp 1200w
+                    "
+                    sizes="(width <= 992px) 100vw, (width <= 1200px) 75vw, 1130px"
                     style="display: block; margin: auto; max-width: 50%"
                 />
             </div>

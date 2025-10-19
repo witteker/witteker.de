@@ -24,7 +24,14 @@ layout: default
                     <a href="#{{photo}}">
                         <div class="image-container">
                             <img
-                                src="/assets/images/{{page.slug}}/{{photo}}.jpg"
+                                loading="lazy"
+                                srcset="
+                                    /assets/images/{{page.slug}}/mobile/{{photo}}.webp   320w,
+                                    /assets/images/{{page.slug}}/tablet/{{photo}}.webp   768w,
+                                    /assets/images/{{page.slug}}/desktop/{{photo}}.webp  960w,
+                                    /assets/images/{{page.slug}}/monitor/{{photo}}.webp 1200w
+                                "
+                                sizes="(width <= 992px) 100vw, (width <= 1200px) 75vw, 1130px"
                             />
                         </div>
                     </a>
